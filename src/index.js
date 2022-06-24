@@ -47,7 +47,7 @@ return countries.map(({flags, name}) => {
     return `
     <li class="country-item">
 <img class="country-flag" src="${flags.svg}"></img>
-<p class="country-name">${name.common}</p>
+<p class="country-name">${name.official}</p>
 </li>`;
 })
 .join('');
@@ -57,12 +57,9 @@ return countries.map(({flags, name}) => {
 function countryInfoMarkup(countries) {
 return countries.map(({name, flags, capital, population, languages}) =>{
     return `<div class="country-info__name"><img src="${flags.svg}" alt="${
-        name.official
-      }" class="country-info__img" />${name.official}</div>
+        name.official}" class="country-flag" />${name.official}</div>
         <p><span class="country-info__boldtext">Capital: </span>${capital}</p>
         <p><span class="country-info__boldtext">Population: </span>${population}</p>
-        <p><span class="country-info__boldtext">Languages: </span>${Object.values(
-          languages
-        ).join(', ')}</p>`;
+        <p><span class="country-info__boldtext">Languages: </span>${Object.values(languages).join(', ')}</p>`;
 }).join('');
 }
