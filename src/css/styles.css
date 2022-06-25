@@ -38,9 +38,14 @@ margin-right: 4px;
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+ 
 }
 
 p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.country-info__name {
+  font-size: 35px;
 }
